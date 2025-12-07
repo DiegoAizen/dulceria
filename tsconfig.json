@@ -1,26 +1,27 @@
-/* app/globals.css */
-@import "tailwindcss";
-
-@theme inline {
-  --color-primary: #f472b6;
-  --color-primary-dark: #db2777;
-  --color-secondary: #fbbf24;
-  --color-accent: #a78bfa;
-  --color-background: #fff7ed;
-  --color-text: #4a1d1f;
-  
-  --font-sans: ui-sans-serif, system-ui, sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  --font-cursive: "Dancing Script", cursive;
-}
-
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: var(--font-sans);
-}
-
-@layer base {
-  h1, h2, h3 {
-    font-family: var(--font-cursive);
-  }
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
